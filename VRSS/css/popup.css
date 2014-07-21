@@ -1,0 +1,20 @@
+* { margin:0px;
+    padding: 0px;
+}
+body {
+    width:150px;
+    height:100px;
+}
+.btn  {
+    width: 100%;
+    border-radius: 0px;
+}
+.title {
+    border-top:3 solid #f5b46e;
+    border-bottom: 2 solid #F5b46e;
+    margin-bottom:2px;
+    font-size: 20px;
+    color: #F5b46e;
+    text-align:center;
+    font-weight:bold;
+}

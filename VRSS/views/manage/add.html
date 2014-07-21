@@ -1,0 +1,49 @@
+<ul class="nav nav-tabs yann-nav">
+    <li class="active"><a href="#/manage/add">查找添加</a></li>
+    <li><a href="#/manage">Feeds</a></li>
+</ul>
+
+<div class="row">
+    <div class="col-md-8">
+        <form role="form" class="form-horizontal" ng-submit="lookup()">
+            <legend>查找Feed</legend>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="lookup-url">URL</label>
+                <div class="col-sm-10">
+                    <input id="lookup-url" name="url" type="url" placeholder="http://youbookee.com/feed.xml"
+                        ng-model="lookup.url" class="form-control" />
+                </div>
+            </div>
+            <div class="pull-right">
+                <button type="submit" class="btn btn-primary">查询</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <form class="form-horizontal" ng-submit="add()">
+            <fieldset>
+                <legend>添加Feed</legend>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="add-title">Title</label>
+                    <div class="col-sm-10">
+                        <input id="add-title" name="title" type="text" placeholder="Feed名" 
+                            ng-model="feed.title" class="form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="add-url">URL</label>
+                    <div class="col-sm-10">
+                        <input id="add-url" name="url" type="url" placeholder="http://youbookee.com/feed.xml"
+                            ng-model="feed.url" class="form-control" />
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-success">添加</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div>
+<h1 ng-bind-html="feed.title"></h1>
+
+<table class="table table-striped table-condensed">
+    <thead>
+    <tr>
+            <form role="form">
+                <input class="form-control yann-form-control-bg" name="textinput" placeholder="Search" type="text" 
+                    ng-model="searchText" />
+            </form>
+            <hr />
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in feed.entries | filter:searchText">
+            <td>
+                <a href="#/feed/{{feed.id}}/item/{{item.title | hash}}">
+                    <strong ng-bind-html="item.title"></strong>
+                </a>
+                <br />
+                <span ng-bind-html="item.contentSnippet"></span>
+            </td>
+            <td>
+                {{item.publishedDate | rssDate}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

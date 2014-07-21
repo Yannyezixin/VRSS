@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs yann-nav">
+    <li><a href="#/manage/add">查找添加</a></li>
+    <li class="active"><a href="#/manage">Feeds</a></li>
+</ul>
+
+<table class="table table-striped table-condensed">
+    <tbody>
+        <tr ng-repeat="feed in feeds">
+            <td>
+                <img ng-src="http://g.etfv.co/{{feed.url}}" width="19" height="19">
+                <a href="{{feed.url}}" target="_blank" ng-bind-html="feed.title">
+            </td>
+            <td>
+                <div class="btn-group pull-right">
+                    <button href="#/manage"  class="btn btn-danger " ng-click="delete(feed.id)" title="delete">X
+                    </button>
+                <div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+

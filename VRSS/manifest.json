@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.2",
+    "name": "VRSS订阅器",
+    "description": "管理RSS订阅的好助手,聚合你想要的信息",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "VRSS订阅器",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "js/jquery.min.js",
+            "js/angular.min.js",
+            "js/angular-resource.js",
+            "scripts/background.js"
+        ]
+    },
+    "permissions": [
+        "https://ajax.googleapis.com/*",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["scripts/content.js"],
+            "css": ["css/app.css"]
+        }
+    ],
+
+    "options_page": "index.html",
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ajax.googleapis.com ; object-src 'self'; "
+}
