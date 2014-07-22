@@ -2,6 +2,13 @@ body {
     margin-top:70px;
     background-color: #f8f8f8;
 }
+.content {
+	font-family:Lora,Georgia,"Xin Gothic","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+	color: #666;
+	font-size: 18px;
+	line-height:1.6;
+	font-weight: 400;
+}
 a:hover {
     text-decoration: none;
 }
