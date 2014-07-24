@@ -3,7 +3,7 @@
 }
 body {
     width:150px;
-    height:100px;
+    height:auto;
 }
 .btn  {
     width: 100%;
@@ -17,4 +17,7 @@ body {
     color: #F5b46e;
     text-align:center;
     font-weight:bold;
+}
+.loading {
+    text-align: center;
 }

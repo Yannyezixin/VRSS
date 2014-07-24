@@ -4,9 +4,9 @@
     <body >
         <div ng-controller="vrssCtrl">
             <p class="title">VRSS</p>
-                <button ng-click="add()" class="btn btn-success">订阅此Feed至VRSS</button>
-                <button ng-click="option()" class="btn btn-default">我的VRSS</button>
-            <p ng-bind="response" id="response"></p>
+                <button ng-disabled="FeedHas" ng-click="add()" class="btn btn-success" ng-bind="buttonNews"></button>
+                <div class="loading"><img ng-show="loading" src="./images/searchLoading.gif"></div>
+                <button ng-click="option()" class="btn btn-default">My VRSS</button>
         </div>
         <script src="js/angular.min.js"></script>
         <script src="scripts/popup.js"></script>
