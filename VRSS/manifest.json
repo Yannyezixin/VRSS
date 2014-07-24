@@ -31,8 +31,7 @@
     "content_scripts": [
         {
             "matches": ["*://*/*"],
-            "js": ["scripts/content.js"],
-            "css": ["css/app.css"]
+            "js": ["scripts/content.js"]
         }
     ],
 
