@@ -48,3 +48,7 @@ a:hover {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	background-color: #f8f8f8;
 }
+
+.loading {
+    text-align: center;
+}
