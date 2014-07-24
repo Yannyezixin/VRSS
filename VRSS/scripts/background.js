@@ -73,12 +73,14 @@ function checkIfHasFeed (result) {
     for (var i = list.length - 1; i >= 0; i--) {
         if(list[i].url == checkUrl) {
             FeedHas = 'hadAdd';
+            chrome.browserAction.setIcon({path: 'images/icon19_1.png'});
             return;
         }
     }
     FeedHas = 'NoAdd';
 }
 chrome.tabs.onActivated.addListener(function(activeInfo) {
+    chrome.browserAction.setIcon({path: 'images/icon19.png'});
     chrome.tabs.get(activeInfo.tabId, function(tab) {
         var url = tab.url;
         var searchUrl = 'http://ajax.googleapis.com/ajax/services/feed/lookup?callback?&q=' + url + '&v=1.0';
