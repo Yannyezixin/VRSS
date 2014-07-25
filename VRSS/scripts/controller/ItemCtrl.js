@@ -19,6 +19,7 @@ angular.module('yann.MiniRSS')
                     if(list[j].originalUrl == $scope.item.link) {
                         $scope.collectStatus = '已收藏';
                         $scope.disabledClick = true;
+                        break;
                     } else {
                         $scope.disabledClick = false;
                     }
