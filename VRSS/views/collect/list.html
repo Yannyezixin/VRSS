@@ -1,0 +1,10 @@
+<form role="form">
+    <input class="form-control yann-form-control-bg" name="textinput" placeholder="Search" type="text" ng-model="searchText" />
+</form>
+<div class="panel panel-default yann-panel" ng-repeat = "collect in collects | filter: searchText" >
+  <div class="panel-body">
+      <h3><a href="{{ collect.url}}">{{ collect.articleTitle}}</a></h3>
+      <p>来自：<a title="查看原始文档" href="{{ collect.originalUrl}}" target="_blank">{{ collect.title }}</a></p>
+  </div>
+</div>
+

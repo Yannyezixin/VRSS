@@ -62,4 +62,52 @@ angular.module('yann.MiniRSS.FeedList', ['yann.LocalObjectStorage'])
 
             return minId;
         };
+    })
+	.service('CollectList', function ($rootScope, LocalObjectStorage) {
+        this.add = function(url,articleTitle, title, originalUrl) {
+            var list = this.get();
+            var id = localStorage.getItem('CollectListId') ? localStorage.getItem('CollectListId') : 1;
+
+            if(id != 1) {
+                list.push({
+                    url:            url,
+                    articleTitle:   articleTitle,
+                    title:          title,
+                    originalUrl:    originalUrl,
+                    id:             id
+                });
+            } else {
+                list = Array({
+                    url:            url,
+                    articleTitle:   articleTitle,
+                    title:          title,
+                    originalUrl:    originalUrl,
+                    id:             id
+                });
+            }
+
+            LocalObjectStorage.setObject('CollectList', list);
+            localStorage.setItem('CollectListId', ++id);
+        };
+
+        this.delete = function (id) {
+            var list = this.get();
+
+            for (var i = list.length - 1; i >= 0; i--) {
+                if (list[i].id == id) {
+                    list.splice(i, 1);
+                }
+            }
+
+            LocalObjectStorage.setObject('CollectList', list);
+            $rootScope.$broadcast('CollectList', list);
+        };
+
+        this.get = function () {
+            if (LocalObjectStorage.contains('CollectList')) {
+                return LocalObjectStorage.getObject('CollectList');
+            }
+        };
+
+
     });
