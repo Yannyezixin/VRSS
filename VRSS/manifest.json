@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "VRSS订阅器",
     "description": "管理RSS订阅的好助手,聚合你想要的信息",
     "icons": {
