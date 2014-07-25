@@ -15,15 +15,15 @@ angular.module('yann.MiniRSS')
                 if (HashString.perform(entries[i].title) == $routeParams.hashKey) {
                     $scope.item = entries[i];
 
-                for (var j = list.length - 1; j >= 0; j--) {
-                    if(list[j].originalUrl == $scope.item.link) {
-                        $scope.collectStatus = '已收藏';
-                        $scope.disabledClick = true;
-                        break;
-                    } else {
-                        $scope.disabledClick = false;
+                    $scope.disabledClick = false;
+
+                    for (var j = list.length - 1; j >= 0; j--) {
+                        if(list[j].originalUrl == $scope.item.link) {
+                            $scope.collectStatus = '已收藏';
+                            $scope.disabledClick = true;
+                            break;
+                        }
                     }
-                }
                 }
             }
         });
