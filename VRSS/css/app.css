@@ -2,7 +2,8 @@ body {
     margin-top:70px;
     background-color: #f8f8f8;
 }
-.content {
+.content,
+.panel-body {
 	font-family:Lora,Georgia,"Xin Gothic","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
 	color: #666;
 	font-size: 18px;
@@ -51,4 +52,10 @@ a:hover {
 
 .loading {
     text-align: center;
+}
+.yann-panel {
+	border-radius: 0px;
+}
+.panel-body {
+	padding: 2px 20px;
 }

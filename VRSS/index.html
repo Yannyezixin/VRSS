@@ -14,8 +14,14 @@
         <div class="container">
             <a class="navbar-brand" href="#/"><strong>VRSS<strong></a>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#/manage">管理</a>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">中心<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#/collect">收藏</a></li>
+						<li><a href="#/manage">管理</a></li>
+						<li class="divider"></li>
+						<li><a href="#">设置</a></li>
+					</ul>
                 </li>
             </ul>
         </div>
@@ -37,10 +43,12 @@
         </div>
     </div>
 </div>
+    <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-route.js"></script>
     <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/service/googleapis.feed.js"></script>
     <script src="scripts/service/FeedList.js"></script>
@@ -52,5 +60,6 @@
     <script src="scripts/controller/ItemCtrl.js"></script>
     <script src="scripts/controller/FeedList.js"></script>
     <script src="scripts/controller/FeedManageCtrl.js"></script>
+    <script src="scripts/controller/CollectsCtrl.js"></script>
 </body>
 </html>
